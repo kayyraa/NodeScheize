@@ -1,0 +1,75 @@
+.Editor > .CodeEditor {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 1vh;
+    padding-left: 1vh;
+
+    position: absolute;
+    width: 99%;
+    height: 99vh;
+
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.Editor > .CodeEditor > div {
+    width: 100%;
+    height: 4vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Editor > .CodeEditor > div > div:first-child {
+    margin-left: 8px;
+}
+
+.Editor > .CodeEditor > div > div.Keyword {
+    color: rgb(189, 120, 221);
+}
+
+.Editor > .CodeEditor > div > div.Number {
+    color: rgb(209, 154, 102);
+}
+
+.Editor > .CodeEditor > div > div.String {
+    color: rgb(152, 195, 121);
+}
+
+.Editor > .CodeEditor > div > div.Operator {
+    color: rgb(86, 182, 194);
+}
+
+.Editor > .CodeEditor > div > div.Comment {
+    color: rgb(127, 132, 142);
+}
+
+.Editor > .CodeEditor > div > div.Any {
+    color: rgb(171, 178, 191);
+}
+
+.Editor > .CodeEditor > div > div.Operator {
+    color: rgb(86, 182, 194);
+}
+
+.Editor > .CodeEditor > div > div:not(.Operator):not(.Any) {
+    margin-left: 8px;
+}
+
+.Editor > .CodeEditor > div > input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+
+    font-size: 16px;
+
+    margin: auto;
+    padding: 0;
+}
