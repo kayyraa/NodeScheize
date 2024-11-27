@@ -69,7 +69,27 @@ const LoadLines = () => {
                         NewLineInput.focus();
                     }, 0);
 
-                    NewLineInput.addEventListener(keydo)
+                    NewLineInput.addEventListener('keydown', (Event) => {
+                        if (Event.key === "Backspace") {
+                    if (Line.previousElementSibling) {
+                        Line.remove();
+                    }
+                } else if (Event.key === "Enter") {
+                    SaveChanges();
+
+                    const NewLine = document.createElement("div");
+                    NewLine.setAttribute("Number", CodeEditor.children.length);
+                    const NewLineInput = document.createElement("input");
+                    NewLine.appendChild(NewLineInput);
+                    CodeEditor.appendChild(NewLine);
+                    LoadLines();
+
+                    setTimeout(() => {
+                        NewLineInput.focus();
+                    }, 0);
+                
+                        
+                    });
                 }
             });
 
